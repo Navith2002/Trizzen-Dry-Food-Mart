@@ -250,7 +250,7 @@ const DeliveryScreen = () => {
               <TableCell>NIC</TableCell>
               <TableCell>Email</TableCell>
               <TableCell>Category</TableCell>
-              <TableCell>Order Status</TableCell>
+              <TableCell>Current Status</TableCell>
               <TableCell>Address</TableCell>
               <TableCell>Image</TableCell>
             </TableRow>
@@ -357,16 +357,16 @@ const DeliveryScreen = () => {
               </Select>
             </FormControl>
             <FormControl fullWidth margin="normal">
-              <InputLabel id="order-status-label">Order Status</InputLabel>
+              <InputLabel id="order-status-label">Current Status</InputLabel>
               <Select
                 labelId="order-status-label"
                 name="orderStatus"
                 value={currentDelivery.orderStatus}
                 onChange={handleSelectChange} // Use the new handleSelectChange
               >
-                <MenuItem value="Pending">Pending</MenuItem>
+                <MenuItem value="Pending">Available</MenuItem>
                 <MenuItem value="Completed">Completed</MenuItem>
-                <MenuItem value="In Transit">In Transit</MenuItem>
+                <MenuItem value="In Transit">Out To Delivery</MenuItem>
                 {/* Add more statuses as needed */}
               </Select>
             </FormControl>
